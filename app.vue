@@ -1,5 +1,5 @@
 <template>
-  <VApp>
-    <VBtn>456</VBtn>
-  </VApp>
+  <NuxtLayout>
+    <NuxtPage />
+  </NuxtLayout>
 </template>
