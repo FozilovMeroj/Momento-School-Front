@@ -15,26 +15,13 @@ export default defineNuxtConfig({
     "pinia-plugin-persistedstate/nuxt",
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
-    "@nuxtjs/tailwindcss",
-    "nuxtjs-naive-ui",
+    "vuetify-nuxt-module",
   ],
-  vite: {
-    plugins: [
-      AutoImport({
-        imports: [
-          {
-            "naive-ui": [
-              "useDialog",
-              "useMessage",
-              "useNotification",
-              "useLoadingBar",
-            ],
-          },
-        ],
-      }),
-      Components({
-        resolvers: [NaiveUiResolver()],
-      }),
-    ],
+  vuetify: {
+    vuetifyOptions: {
+      theme: {
+        defaultTheme: "dark",
+      },
+    },
   },
 });

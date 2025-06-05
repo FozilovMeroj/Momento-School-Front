@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <NuxtRouteAnnouncer />
-    <NuxtWelcome />
-  </div>
+  <VApp>
+    <VBtn>456</VBtn>
+  </VApp>
 </template>
