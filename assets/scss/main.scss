@@ -1,0 +1,13 @@
+@use "variables" as *;
+
+* {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.v-application {
+  background-color: $primaryDarker !important;
+}
+
+.bg-default {
+  background-color: $primaryDark !important;
+}

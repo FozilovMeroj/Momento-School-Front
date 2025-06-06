@@ -2,7 +2,7 @@
 
 <template>
   <VAppBar color="transparent" elevation="0" class="px-2">
-    <VCard color="primary" class="w-100">
+    <VCard class="w-100 bg-default border">
       <VCardText class="py-2">
         <VAppBarTitle>MomentoEdu</VAppBarTitle>
       </VCardText>

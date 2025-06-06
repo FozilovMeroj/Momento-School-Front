@@ -14,6 +14,6 @@
 
 <style lang="scss">
 .layout {
-  background-color: $primaryDark !important;
+  background-color: $primaryDarker;
 }
 </style>

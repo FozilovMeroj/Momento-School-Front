@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import variables from "@/assets/scss/_variables.scss";
+import { md3 } from "vuetify/blueprints";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -14,7 +14,20 @@ export default defineNuxtConfig({
     "@vueuse/nuxt",
     "@nuxtjs/i18n",
     "vuetify-nuxt-module",
+    "@nuxtjs/google-fonts",
   ],
+  css: ["~/assets/scss/main.scss"],
+  icon: {
+    serverBundle: {
+      collections: ["tabler"],
+    },
+  },
+  googleFonts: {
+    families: {
+      "JetBrains+Mono": [100, 200, 300, 400, 500, 600, 700, 800],
+    },
+    display: "swap",
+  },
   vuetify: {
     vuetifyOptions: {
       theme: {
@@ -23,11 +36,12 @@ export default defineNuxtConfig({
           dark: {
             dark: true,
             colors: {
-              primary: "#120c42",
+              primary: "#2196F3",
             },
           },
         },
       },
+      blueprint: md3,
     },
   },
   vite: {
