@@ -1,14 +1,19 @@
 <script setup lang="ts"></script>
 
 <template>
-  <VApp>
-    <VAppBar>
-      <VAppBarTitle>MomentoEdu</VAppBarTitle>
-    </VAppBar>
+  <VApp class="layout">
+    <LayoutDrawer />
+    <LayoutHeader />
     <VMain>
-      <slot />
+      <VContainer>
+        <slot />
+      </VContainer>
     </VMain>
   </VApp>
 </template>
 
-<style scoped></style>
+<style lang="scss">
+.layout {
+  background-color: $primaryDark !important;
+}
+</style>

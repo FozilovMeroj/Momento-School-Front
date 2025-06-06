@@ -1,7 +1,5 @@
-import AutoImport from "unplugin-auto-import/vite";
-import { NaiveUiResolver } from "unplugin-vue-components/resolvers";
-import Components from "unplugin-vue-components/vite";
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import variables from "@/assets/scss/_variables.scss";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
@@ -21,6 +19,23 @@ export default defineNuxtConfig({
     vuetifyOptions: {
       theme: {
         defaultTheme: "dark",
+        themes: {
+          dark: {
+            dark: true,
+            colors: {
+              primary: "#120c42",
+            },
+          },
+        },
+      },
+    },
+  },
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use "~/assets/scss/_variables.scss" as *;',
+        },
       },
     },
   },
