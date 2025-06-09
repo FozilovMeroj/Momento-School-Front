@@ -1,5 +1,4 @@
 @use "sass:color";
 
-$primary: #120c42;
-$primaryDark: color.scale($primary, $lightness: -40%);
-$primaryDarker: color.scale($primary, $lightness: -60%);
+$primaryDark: #20227730;
+$primaryDarker: #14162A;

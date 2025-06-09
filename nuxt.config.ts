@@ -1,10 +1,12 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { md3 } from "vuetify/blueprints";
 
 export default defineNuxtConfig({
   compatibilityDate: "2024-11-01",
   devtools: { enabled: true },
   ssr: false,
+  runtimeConfig: {
+    public: { appTitle: process.env.APP_TITLE },
+  },
   modules: [
     "@nuxt/image",
     "dayjs-nuxt",
@@ -32,16 +34,7 @@ export default defineNuxtConfig({
     vuetifyOptions: {
       theme: {
         defaultTheme: "dark",
-        themes: {
-          dark: {
-            dark: true,
-            colors: {
-              primary: "#2196F3",
-            },
-          },
-        },
       },
-      blueprint: md3,
     },
   },
   vite: {

@@ -1,11 +1,7 @@
-const menu = [
+export const navigationLinks = [
   {
     label: "Home",
     route: "/",
     icon: "home",
   },
 ];
-
-export function getMenu() {
-  return menu;
-}
