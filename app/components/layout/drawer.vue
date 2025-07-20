@@ -23,7 +23,7 @@ const config = useRuntimeConfig();
     </VListItem>
     <VDivider opacity=".3" class="my-1" />
     <VList nav>
-      <VListItem v-for="link in navigationLinks" link dense>
+      <VListItem v-for="link in navigationLinks" link density="compact">
         <div class="d-flex ga-2 align-center">
         <VListItemMedia>
           <Icon :name="`tabler:${link.icon}`" />
