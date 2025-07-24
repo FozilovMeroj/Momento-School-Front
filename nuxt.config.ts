@@ -17,6 +17,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "vuetify-nuxt-module",
     "@nuxtjs/google-fonts",
+    "@nuxtjs/tailwindcss",
   ],
   css: ["~/assets/scss/main.scss"],
   icon: {

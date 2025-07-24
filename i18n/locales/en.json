@@ -1,14 +1,10 @@
 {
-    "app": {
-        "description": "School Management System"
-    },
-    "general": {
-
-    },
-    "menu": {
-        "dashboard": "Dashboard",
-        "users": "Users",
-        "settings": "Settings",
-        "about": "About"
-    }
+  "general": {
+  },
+  "menu": {
+    "dashboard": "Dashboard",
+    "users": "Users",
+    "settings": "Settings",
+    "about": "About"
+  }
 }

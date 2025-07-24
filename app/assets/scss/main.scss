@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 * {
-  font-family: 'JetBrains Mono', monospace;
+  font-family: 'JetBrains Mono', monospace !important;
 }
 
 .v-application {
@@ -10,4 +10,8 @@
 
 .bg-default {
   background-color: $primaryDark !important;
+}
+
+.v-card, .v-navigation-drawer {
+  border: none !important;
 }

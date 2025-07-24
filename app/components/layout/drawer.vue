@@ -1,46 +1,42 @@
-<script setup lang="ts">
-import { navigationLinks } from "@/utils/navigation/menu";
-const i18n = useI18n()
+<script lang="ts" setup>
+import {navigationLinks} from "@/utils/navigation/menu";
+
 const config = useRuntimeConfig();
-onMounted(()=>{
-  console.log(i18n.messages)
-})
+const rail = ref(true)
 </script>
 
 <template>
-  <VNavigationDrawer class="drawer pt-2">
+  <VNavigationDrawer
+      :rail="rail"
+      class="drawer pt-2"
+      expand-on-hover>
     <VListItem>
-      <div class="d-flex ga-2 align-center">
+      <div class="d-flex ga-2 align-center justify-between">
         <VListItemMedia>
-          <IconsLogo />
-        </VListItemMedia>
-        <div>
-          <VListItemTitle>
-            <h3>{{ config.public.appTitle }}</h3>
-          </VListItemTitle>
-          <VListItemSubtitle>
-            <h5>{{ $t("app.description") }}</h5>
-          </VListItemSubtitle>
-        </div>
-      </div>
-    </VListItem>
-    <VDivider opacity=".3" class="my-1" />
-    <VList nav>
-      <VListItem v-for="link in navigationLinks" link density="compact" :to="link.route">
-        <div class="d-flex ga-2 align-center">
-        <VListItemMedia>
-          <Icon :name="`tabler:${link.icon}`" />
+          <IconsLogo/>
         </VListItemMedia>
         <VListItemTitle>
-          {{ $t(link.label)}}
+          <p class="font-bold">{{ config.public.appTitle }}</p>
         </VListItemTitle>
-        </div>
+        <VListItemMedia class="float-right">
+          <VBtn color="transparent" density="compact" flat icon="" @click="rail=!rail">
+            <Icon :name="rail ? 'tabler:chevron-right-pipe' : 'tabler:chevron-left-pipe'"/>
+          </VBtn>
+        </VListItemMedia>
+      </div>
+    </VListItem>
+    <VDivider class="my-1" opacity=".3"/>
+    <VList nav>
+      <VListItem v-for="link in navigationLinks" :title="$t(link.label)" :to="link.route" density="compact" link>
+        <template #prepend>
+          <Icon :name="`tabler:${link.icon}`" class="mr-5 ml-1"/>
+        </template>
       </VListItem>
     </VList>
   </VNavigationDrawer>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 .drawer {
   background-color: $primaryDark;
 }
