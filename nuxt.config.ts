@@ -24,6 +24,14 @@ export default defineNuxtConfig({
       collections: ["tabler"],
     },
   },
+  i18n:{
+    locales: [
+      {code: "en", iso: "en-US", file: "en.json", name: "English" },
+      {code: "ru", iso: "ru-RU", file: "ru.json", name: "Russian" },
+    ],
+    defaultLocale: "en",
+    lazy: true,
+  },
   googleFonts: {
     families: {
       "JetBrains+Mono": [100, 200, 300, 400, 500, 600, 700, 800],

@@ -1,7 +1,22 @@
 export const navigationLinks = [
   {
-    label: "Home",
+    label: "menu.dashboard",
     route: "/",
-    icon: "home",
+    icon: "dashboard",
+  },
+  {
+    label: "menu.users",
+    route: "/users",
+    icon: "users",
+  },
+  {
+    label: "menu.settings",
+    route: "/settings",
+    icon: "settings",
+  },
+  {
+    label: "menu.about",
+    route: "/about",
+    icon: "info-circle",
   },
 ];
