@@ -28,8 +28,8 @@ const rail = ref(true)
     <VDivider class="my-1" opacity=".3"/>
     <VList nav>
       <VListItem v-for="link in navigationLinks" :title="$t(link.label)" :to="link.route" density="compact" link>
-        <template #prepend>
-          <Icon :name="`tabler:${link.icon}`" class="mr-5 ml-1"/>
+        <template #prepend class="13">
+          <Icon :name="`tabler:${link.icon}`" class="mr-5 ml-0.5"/>
         </template>
       </VListItem>
     </VList>
