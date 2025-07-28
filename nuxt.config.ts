@@ -14,7 +14,6 @@ export default defineNuxtConfig({
         "@pinia/nuxt",
         "pinia-plugin-persistedstate/nuxt",
         "@vueuse/nuxt",
-        "@nuxtjs/i18n",
         "vuetify-nuxt-module",
         "@nuxtjs/google-fonts",
         "@nuxtjs/tailwindcss",
@@ -26,14 +25,6 @@ export default defineNuxtConfig({
             collections: ["tabler"],
         },
     },
-    i18n: {
-        locales: [
-            {code: "en", iso: "en-US", file: "en.json", name: "English"},
-            {code: "ru", iso: "ru-RU", file: "ru.json", name: "Russian"},
-        ],
-        defaultLocale: "en",
-        lazy: true,
-    },
     googleFonts: {
         families: {
             "JetBrains+Mono": [100, 200, 300, 400, 500, 600, 700, 800],
@@ -42,6 +33,7 @@ export default defineNuxtConfig({
     },
     vuetify: {
         vuetifyOptions: {
+            localeMessages: ['en', 'ru'],
             theme: {
                 defaultTheme: "dark",
             },
