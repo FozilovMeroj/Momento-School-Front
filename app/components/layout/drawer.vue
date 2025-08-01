@@ -8,24 +8,23 @@ const rail = ref(true)
 <template>
   <VNavigationDrawer
       :rail="rail"
-      class="drawer pt-2"
+      class="drawer"
       expand-on-hover>
-    <VListItem class="-ml-1">
+    <VListItem class="px-3 bg-primary">
       <div class="flex gap-2 align-center justify-between">
         <VListItemMedia>
-          <IconsLogo/>
+          <IconsLogo class="!fill-white"/>
         </VListItemMedia>
         <VListItemTitle>
           <p class="font-bold">{{ config.public.appTitle }}</p>
         </VListItemTitle>
         <VListItemMedia class="float-right">
-          <VBtn color="transparent" density="compact" flat icon="" @click="rail=!rail">
+          <VBtn color="transparent" density="comfortable" flat icon="" @click="rail=!rail">
             <Icon :name="rail ? 'tabler:chevron-right-pipe' : 'tabler:chevron-left-pipe'"/>
           </VBtn>
         </VListItemMedia>
       </div>
     </VListItem>
-    <VDivider class="my-1" opacity=".3"/>
     <VList nav>
       <VListItem v-for="link in navigationLinks" :title="$t(link.label)" :to="link.route" density="compact" link>
         <template #prepend class="13">

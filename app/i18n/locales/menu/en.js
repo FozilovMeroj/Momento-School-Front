@@ -3,6 +3,5 @@ const messages = {
     "users": "Users",
     "settings": "Settings",
     "about": "About",
-    "profile": "Profile"
 }
 export default messages
