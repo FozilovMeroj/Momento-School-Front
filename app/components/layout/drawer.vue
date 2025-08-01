@@ -10,8 +10,8 @@ const rail = ref(true)
       :rail="rail"
       class="drawer pt-2"
       expand-on-hover>
-    <VListItem>
-      <div class="d-flex ga-2 align-center justify-between">
+    <VListItem class="-ml-1">
+      <div class="flex gap-2 align-center justify-between">
         <VListItemMedia>
           <IconsLogo/>
         </VListItemMedia>
@@ -37,7 +37,4 @@ const rail = ref(true)
 </template>
 
 <style lang="scss" scoped>
-.drawer {
-  background-color: $primaryDark;
-}
 </style>

@@ -1,19 +1,16 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup></script>
 
 <template>
   <VApp class="layout">
-    <LayoutDrawer />
-    <LayoutHeader />
+    <LayoutDrawer/>
+    <LayoutHeader/>
     <VMain>
       <VContainer>
-        <slot />
+        <slot/>
       </VContainer>
     </VMain>
   </VApp>
 </template>
 
 <style lang="scss">
-.layout {
-  background-color: $primaryDarker;
-}
 </style>

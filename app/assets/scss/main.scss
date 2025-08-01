@@ -4,18 +4,6 @@
   font-family: 'JetBrains Mono', monospace !important;
 }
 
-.v-application {
-  background-color: $primaryDarker !important;
-}
-
-.bg-default {
-  background-color: $primaryDark !important;
-}
-
 .v-card, .v-navigation-drawer {
   border: none !important;
-}
-
-.v-theme-dark {
-  --v-theme-surface: $primaryDark !important;
 }

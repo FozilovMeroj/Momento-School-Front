@@ -36,6 +36,20 @@ export default defineNuxtConfig({
             localeMessages: ['en', 'ru'],
             theme: {
                 defaultTheme: "dark",
+                themes: {
+                    light: {
+                        colors: {
+                            background: "#e0e0e0",
+                            surface: "#f0f0f0"
+                        }
+                    },
+                    dark: {
+                        colors: {
+                            background: "#0f0f0f",
+                            surface: "#1d1d1d",
+                        }
+                    }
+                }
             },
         },
     },
