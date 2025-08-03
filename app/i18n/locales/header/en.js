@@ -1,6 +1,6 @@
 const messages = {
-    "profile": "Profile",
     "maximize": "Maximize",
+    "minimize": "Minimize",
     "notifications": "Notifications",
     "language": "Language",
     "theme": "Theme",

@@ -27,6 +27,8 @@ const changeFullScreenMode = () => {
     }
   }
 }
+const logout = () => {
+}
 const changeTheme = () => {
   theme.change(theme.name.value === 'dark' ? 'light' : 'dark')
 }
@@ -49,7 +51,8 @@ onBeforeUnmount(() => {
             <VAppBarTitle> {{ config.public.appTitle }}</VAppBarTitle>
           </div>
           <div class="d-flex align-center gap-3">
-            <VBtn v-tooltip:bottom="$t('header.maximize')" density="comfortable" icon @click="changeFullScreenMode">
+            <VBtn v-tooltip:bottom="$t('header.'+ (isFullscreen ? 'minimize' : 'maximize'))" density="comfortable" icon
+                  @click="changeFullScreenMode">
               <Icon :name="isFullscreen ? 'tabler:minimize' : 'tabler:maximize'"/>
             </VBtn>
             <VBtn v-tooltip:bottom="$t('header.theme')" density="comfortable" icon @click="changeTheme">
@@ -57,6 +60,7 @@ onBeforeUnmount(() => {
             </VBtn>
             <VBtn v-tooltip:bottom="$t('header.language')" density="comfortable" icon>
               <Icon name="tabler:language"/>
+              <MenuLang/>
             </VBtn>
             <VBtn v-tooltip:bottom="$t('header.messages')" density="comfortable" icon>
               <Icon name="tabler:messages"/>
@@ -72,6 +76,7 @@ onBeforeUnmount(() => {
                 <div class="text-sm font-bold truncate w-[125px]">Fozilov Meroj</div>
                 <div class="text-xs truncate w-[100px]">fozilovmerodz@gmail.com</div>
               </div>
+              <MenuProfile/>
             </div>
           </div>
         </VCardText>

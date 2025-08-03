@@ -25,9 +25,9 @@ const rail = ref(true)
         </VListItemMedia>
       </div>
     </VListItem>
-    <VList nav>
-      <VListItem v-for="link in navigationLinks" :title="$t(link.label)" :to="link.route" density="compact" link>
-        <template #prepend class="13">
+    <VList density="compact" nav>
+      <VListItem v-for="link in navigationLinks" :title="$t(link.label)" :to="link.route" link>
+        <template #prepend>
           <Icon :name="`tabler:${link.icon}`" class="mr-5 ml-0.5"/>
         </template>
       </VListItem>

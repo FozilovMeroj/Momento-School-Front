@@ -1,13 +1,9 @@
-import {en as $vuetify} from 'vuetify/locale'
-
 const messages = {
-    "general": {},
-    "menu": {
-        "dashboard": "Dashboard",
-        "users": "Users",
-        "settings": "Settings",
-        "about": "About"
-    },
-    $vuetify,
+    "maximize": "Во весь экран",
+    "minimize": "Свернуть окно",
+    "notifications": "Уведомления",
+    "language": "Язык",
+    "theme": "Тема",
+    "messages": "Сообщения",
 }
 export default messages
